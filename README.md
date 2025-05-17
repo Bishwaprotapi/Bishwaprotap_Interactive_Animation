@@ -1,4 +1,4 @@
-# Bishwaprotap_Interactive_Animation# Interactive Animation Project
+# Bishwaprotap_Interactive_Animation
 
 ## Overview
 This project is an interactive animation system built using OpenGL and GLUT, featuring multiple animated scenes and day/night mode functionality. The project demonstrates various computer graphics techniques and interactive elements.
@@ -30,13 +30,32 @@ This project is an interactive animation system built using OpenGL and GLUT, fea
 
 ### Additional Controls
 - Press M: Toggle animation on/off
+- Press +: Increase animation speed
+- Press -: Decrease animation speed
+- Press Space: Pause/Resume animation
+- Press ESC: Exit the application
+
+### New Features
+- Dynamic weather effects (rain, snow, fog)
+- Interactive camera controls (zoom, pan, rotate)
+- Particle system for special effects
+- Custom color themes
+- Save/Load scene configurations
+- Screenshot capture functionality
+- Performance statistics display
+- Customizable animation speeds
+- Multi-monitor support
+- Fullscreen mode toggle
 
 ## Technical Requirements
 
 ### Dependencies
-- OpenGL
+- OpenGL 3.3 or later
 - GLUT (OpenGL Utility Toolkit)
-- C++ Compiler (supporting C++11 or later)
+- GLEW (OpenGL Extension Wrangler Library)
+- GLM (OpenGL Mathematics)
+- C++ Compiler (supporting C++17 or later)
+- CMake 3.10 or later
 
 ### Installation
 
@@ -47,139 +66,191 @@ This project is an interactive animation system built using OpenGL and GLUT, fea
    - Place `freeglut.dll` in `C:\Windows\System32`
    - Place `freeglut.lib` in your compiler's lib directory
    - Place `freeglut.h` in your compiler's include directory
+3. Install GLEW and GLM using vcpkg or download manually
 
 #### Linux
 ```bash
+sudo apt-get update
 sudo apt-get install freeglut3-dev
+sudo apt-get install libglew-dev
+sudo apt-get install libglm-dev
 ```
 
 #### macOS
 ```bash
 brew install freeglut
+brew install glew
+brew install glm
 ```
 
 ## Project Structure
 ```
 project/
-├── main.cpp          # Main source file
-├── README.md         # This file
-├── report.md         # Detailed project report
-└── screenshots/      # Project screenshots
-    ├── day_mode.png
-    ├── night_mode.png
-    ├── rain_scene.png
-    ├── birds_scene.png
-    └── robot_scene.png
+├── src/                    # Source files
+│   ├── main.cpp           # Main entry point
+│   ├── scenes/            # Scene implementations
+│   ├── utils/             # Utility functions
+│   └── shaders/           # GLSL shader files
+├── include/               # Header files
+├── lib/                   # External libraries
+├── resources/             # Resource files
+│   ├── textures/         # Texture images
+│   ├── models/           # 3D models
+│   └── fonts/            # Font files
+├── build/                # Build directory
+├── tests/                # Unit tests
+├── docs/                 # Documentation
+├── README.md             # This file
+├── CMakeLists.txt        # CMake configuration
+└── screenshots/          # Project screenshots
 ```
 
 ## Screenshots
 
 ### Day Mode
 ![Day Mode](screenshots/day_mode.png)
-- Bright blue sky
-- Yellow sun
-- Bright green ground
-- White clouds
+- Bright blue sky with dynamic cloud movement
+- Realistic sun with lens flare effects
+- Procedurally generated terrain
+- Dynamic lighting and shadows
 
 ### Night Mode
 ![Night Mode](screenshots/night_mode.png)
-- Dark blue sky
-- White moon
-- Dark green ground
-- Twinkling stars
+- Realistic star field with constellations
+- Dynamic moon phases
+- Ambient lighting effects
+- Volumetric fog
 
 ### Rain Scene
 ![Rain Scene](screenshots/rain_scene.png)
-- Animated raindrops
-- Splash effects
-- Cloudy background
+- Realistic raindrop physics
+- Dynamic splash effects
+- Water surface ripples
+- Atmospheric effects
 
 ### Birds Scene
 ![Birds Scene](screenshots/birds_scene.png)
-- Flying birds
-- Animated wings
-- Sky background
+- Flocking behavior
+- Realistic wing animations
+- Dynamic flight paths
+- Environmental interaction
 
 ### Robot Scene
 ![Robot Scene](screenshots/robot_scene.png)
-- Dancing robot
-- Animated arms and legs
-- Interactive movement
+- Inverse kinematics
+- Dynamic joint movements
+- Interactive dance patterns
+- Particle effects
 
 ### Men Wacking Scene
 ![Men Wacking Scene](screenshots/men_wacking.png)
-- Two animated characters
-- Arm movement physics
-- Interactive timing
+- Physics-based animations
+- Collision detection
+- Dynamic timing
+- Character customization
 
 ### Cows Eating Scene
 ![Cows Eating Scene](screenshots/cows_eating.png)
-- Four cows grazing
-- Animated mouths
-- Grass interaction
+- Procedural grass animation
+- Realistic grazing behavior
+- Dynamic environment interaction
+- Weather effects
 
 ### Fish Swimming Scene
 ![Fish Swimming Scene](screenshots/fish_swimming.png)
-- Six colorful fish
-- Animated tails
-- Water effects
+- Fluid dynamics simulation
+- Schooling behavior
+- Dynamic water effects
+- Coral reef environment
 
 ### Butterflies Scene
 ![Butterflies Scene](screenshots/butterflies.png)
-- Seven butterflies
-- Colorful wing patterns
+- Complex wing patterns
 - Natural flight paths
+- Wind effects
+- Flower interaction
 
 ### Cars Moving Scene
 ![Cars Moving Scene](screenshots/cars_moving.png)
-- Eight cars
-- Rotating wheels
-- Road movement
+- Realistic wheel physics
+- Dynamic road effects
+- Traffic patterns
+- Environmental interaction
 
 ### Airplane Scene
 ![Airplane Scene](screenshots/airplane.png)
-- Flying airplane
-- Sky background
+- Flight dynamics
 - Cloud interaction
+- Sky effects
+- Dynamic camera views
 
 ### Elephant Scene
 ![Elephant Scene](screenshots/elephant.png)
-- Walking elephant
-- Animated trunk
-- Ground interaction
+- Realistic walking animation
+- Trunk physics
+- Terrain interaction
+- Environmental effects
 
 ### Ice Skating Scene
 ![Ice Skating Scene](screenshots/ice_skating.png)
-- Spinning skater
-- Ice effects
-- Dynamic movement
+- Ice surface effects
+- Dynamic movement patterns
+- Particle effects
+- Environmental interaction
 
 ### Ocean Waves Scene
 ![Ocean Waves Scene](screenshots/ocean_waves.png)
-- Dynamic waves
-- Water effects
-- Natural movement
+- Realistic wave simulation
+- Dynamic water effects
+- Beach interaction
+- Weather effects
 
 ### Umbrella Scene
 ![Umbrella Scene](screenshots/umbrella.png)
-- Moving umbrella
-- Opening/closing animation
+- Dynamic cloth simulation
 - Rain interaction
+- Wind effects
+- Character animation
 
 ## Development
-- OpenGL for graphics rendering
+- Modern OpenGL for graphics rendering
 - GLUT for window management and user input
-- C++ for core functionality
+- C++17 for core functionality
+- CMake for build system
+- GLEW for OpenGL extensions
+- GLM for mathematics
 
 ## Future Improvements
 1. Add more interactive scenes
-2. Implement 3D graphics
-3. Add sound effects
-4. Enhance visual effects
+2. Implement advanced 3D graphics
+3. Add sound effects and music
+4. Enhance visual effects with shaders
 5. Add more user controls
+6. Implement VR support
+7. Add multiplayer functionality
+8. Create a scene editor
+9. Add more particle effects
+10. Implement advanced physics
+
+## Performance Optimization
+- Efficient rendering techniques
+- Level of detail (LOD) system
+- Occlusion culling
+- Frustum culling
+- Texture compression
+- Shader optimization
+- Memory management
+- Multi-threading support
+
+## Contributing
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
 
 ## License
-This project is open source and available for educational purposes.
+This project is open source and available under the MIT License.
 
 ## Author
 [Your Name]
@@ -187,4 +258,6 @@ This project is open source and available for educational purposes.
 ## Acknowledgments
 - OpenGL community
 - GLUT developers
-- Computer Graphics course materials 
+- Computer Graphics course materials
+- Contributors and testers
+- Open source community 
