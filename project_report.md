@@ -2,26 +2,32 @@
 
 ## ABSTRACT
 
-Computer graphics has revolutionized the way we visualize and interact with digital content. This project demonstrates the power of interactive computer graphics through an engaging animation system built using OpenGL. The project showcases various animated scenes including rain effects, flying birds, moving vehicles, and dynamic weather transitions.
+'A picture is worth a thousand words' goes the ancient Chinese proverb. This has become a cliché in our society after the advent of inexpensive and simple techniques for producing pictures.
 
-The animation system features multiple interactive scenes that can be triggered through keyboard inputs, demonstrating fundamental computer graphics concepts like:
+Computers have become a powerful medium for the rapid and economical production of pictures. There is virtually no area in which graphical displays cannot be used to some advantage. Graphics provide a natural means of communicating with a computer that they have become widespread. The fields in which Computer Graphics find their uses are many. Some of them being User Interfaces, Computer Aided Design, Office automation, Desktop Publishing, Plotting of mathematical, scientific or industrial data, Simulation, Art, Presentations, Cartography, to name a few.
+
+Here, we have implemented an interactive animation system using OpenGL that demonstrates various animated scenes and effects. The project showcases the power of computer graphics in creating engaging and interactive visual experiences. The system features multiple scenes including rain effects, flying birds, moving vehicles, and dynamic weather transitions, all controlled through user input.
+
+The animation system demonstrates fundamental computer graphics concepts like:
 - Real-time animation and motion
 - User interaction and input handling
 - Scene management and transitions
 - Weather effects and particle systems
 - Object-oriented graphics programming
 
-The project serves as both an educational tool for understanding computer graphics principles and an entertaining demonstration of interactive animation capabilities.
-
 ## ACKNOWLEDGMENT
 
-I would like to express my sincere gratitude to all those who contributed to the successful completion of this project.
+While presenting this Graphics Project on "Interactive Animation System", I feel that it is my duty to acknowledge the help rendered by various persons.
 
-First and foremost, I thank my professors and mentors for their guidance and support throughout the development process. Their expertise in computer graphics and OpenGL programming was invaluable.
+First and foremost, I thank God for showering his blessings on me. I am grateful to my institution for providing me a congenial atmosphere to carry out the project successfully.
 
-I am grateful to the open-source community for providing excellent documentation and resources on OpenGL and computer graphics programming.
+I would like to express my heartfelt gratitude to my professors and mentors for their guidance and support throughout the development process. Their expertise in computer graphics and OpenGL programming was invaluable.
 
-Special thanks to my family and friends for their encouragement and understanding during the long hours spent on this project.
+I am very grateful to my guide for their able guidance and valuable advice at every stage of the project which helped me in the successful completion of my project.
+
+I would also be indebted to my Parents and Friends for their continued moral and material support throughout the course of project and helping me in finalizing the presentation.
+
+My heartfelt thanks to all those who have contributed bits, bytes and words to accomplish this Project.
 
 ## CONTENTS
 
@@ -66,8 +72,6 @@ The project features multiple interactive scenes that demonstrate various aspect
 - Day/night transitions
 - Interactive user controls
 - Real-time animation
-
-The scenes are designed to be both visually appealing and educational, showcasing fundamental computer graphics concepts while providing an engaging user experience.
 
 ### 1.1 Project Overview
 
